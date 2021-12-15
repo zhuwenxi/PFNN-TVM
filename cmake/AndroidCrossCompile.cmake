@@ -1,0 +1,13 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(TOOLCHAIN_PATH ${NDK_ROOT}/toolchains/llvm/prebuilt/linux-x86_64)
+set(CMAKE_C_COMPILER ${TOOLCHAIN_PATH}/bin/aarch64-linux-android29-clang)
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN_PATH}/bin/aarch64-linux-android29-clang++)
+
+set(CMAKE_TRY_COMPILE_PLATFORM_VARIABLES
+  ANDROID_ABI
+  ANDROID_PLATFORM
+  ANDROID_STL
+  ANDROID_TOOLCHAIN
+)
